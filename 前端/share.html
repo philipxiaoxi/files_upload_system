@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>香橙派文件上传系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/adress.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript"  src="js/vue.min.js"></script>
+</head>
+<body>
+<div class="xx_head text-center">
+</div>
+ 
+<div id="share" class="xx_login">
+  <div class="xx_login_card card">
+    <div class="card-body">
+      <h5 style="color:rgb(30, 83, 255);">你的朋友分享了:</h5> 
+      <hr>
+      <h4 >{{filename}}</h4>
+      <hr>
+      <button  style="margin:5px;"  class="btn btn-primary xx_right" @click="download_share()">下载</button>
+      <button v-show="online" style="margin:5px;"  class="btn btn-primary xx_right" @click="view_share()">预览</button>
+    </div>
+  </div>
+      <!-- 模态框 -->
+      <div class="modal fade" id="show_img">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+       
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h4 class="modal-title">预览</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+       
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <img v-show="!video" style="width: 100%;height: 100%;" id="img" />
+                <video id="video_" v-show="video" style="width: 100%;" controls>
+                  <source  type="video/mp4">
+                </video>
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <button id="btn" type="button" class="btn btn-success" @click="download_share()">下载</button>
+              <button type="button" class="btn btn-secondary" @click="close" >关闭</button>
+            </div>
+       
+          </div>
+        </div>
+      </div>
+   <!-- 模态框 -->
+   <div class="modal fade" id="tips">
+    <div class="modal-dialog">
+      <div class="modal-content">
+   
+        <!-- 模态框头部 -->
+        <div class="modal-header">
+          <h4 class="modal-title">温馨提示</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+   
+        <!-- 模态框主体 -->
+        <div class="modal-body">
+          {{text}}
+        </div>
+   
+        <!-- 模态框底部 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="xx_foot text-center">
+  <h6>香橙派网络</h6>
+  <p>SERVER BY ORANGEPI-PC</p> 
+</div>
+</body>
+<script type="text/javascript"  src="js/share.js"></script>
+</html>

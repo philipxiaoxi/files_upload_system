@@ -1,0 +1,25 @@
+.xx_login_card{
+    width: 400px;
+}
+.xx_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.xx_show_btn1{
+    display: none;
+}
+.xx_show_btn2{
+    display: inline;
+}
+@media screen and (max-width: 500px) {
+    .xx_login_card{
+        width: 90%;
+    }
+    .xx_show_btn1{
+        display: inline;
+    }
+    .xx_show_btn2{
+        display: none;
+    }
+}

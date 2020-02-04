@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>香橙派文件上传系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/adress.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript"  src="js/vue.min.js"></script>
+</head>
+<body>
+<div class="xx_head text-center">
+  <h1>香橙派文件系统</h1>
+  <p>orangePI-PC filesupload system</p> 
+  
+</div>
+ 
+<div id="upload" class="xx_login">
+  <div class="xx_login_card card">
+    <div class="card-body">
+      <h2 >上传文件</h2>
+      <input value="点击这里选择文件" style="margin-bottom: 10px;" id='location' class="form-control" onclick="$('#i-file').click();">
+      <button  class="btn btn-primary xx_right" @click="upload()">Upload</button>
+      <input ref="file" type="file" name="file" id='i-file' onchange="$('#location').val($('#i-file').val());" style="display: none">
+    </div>
+  </div>
+   <!-- 模态框 -->
+   <div class="modal fade" id="tips">
+    <div class="modal-dialog">
+      <div class="modal-content">
+   
+        <!-- 模态框头部 -->
+        <div class="modal-header">
+          <h4 class="modal-title">温馨提示</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+   
+        <!-- 模态框主体 -->
+        <div class="modal-body">
+          {{text}}
+        </div>
+   
+        <!-- 模态框底部 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="xx_foot text-center">
+  <h6>香橙派网络</h6>
+  <p>SERVER BY ORANGEPI-PC</p> 
+</div>
+</body>
+<script type="text/javascript"  src="js/upload.js"></script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>香橙派文件上传系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/adress.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript"  src="js/vue.min.js"></script>
+</head>
+<body>
+<div class="xx_head text-center">
+  <h1>香橙派文件系统</h1>
+  <p>orangePI-PC filesupload system</p> 
+  
+</div>
+ 
+<div id="index" class="xx_login">
+  <div class="container">
+    <div class="row xx_center ">
+      <div class="col-sm-4 xx_pointer" @click="gotoUrl('home')">
+        <div class="card">
+          <div class="card-body">
+            <img style="width: 150.0px; height: 110.1px;" src="img/pan.jpg"/>
+            <h3>私人网盘</h3>
+            <p>person—files</p>
+          </div>
+        </div>
+        <br>
+      </div>
+      <div class="col-sm-4 xx_pointer" @click="gotoUrl()">
+        <div class="card">
+          <div class="card-body">
+            <img style="width: 150.0px; height: 110.1px;" src="img/pan.jpg"/>
+            <h3>公共网盘</h3>
+            <p>public-files</p>
+          </div>
+        </div>
+        <br>
+      </div>
+      <div class="col-sm-4 xx_pointer" @click="gotoUrl()">
+
+        <div class="card">
+          <div class="card-body">
+            <img style="width: 150.0px; height: 110.1px;" src="img/pan.jpg"/>
+            <h3>其他</h3> 
+            <p>others</p>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="xx_foot text-center">
+  <h6>香橙派网络</h6>
+  <p>SERVER BY ORANGEPI-PC</p> 
+</div>
+</body>
+<script type="text/javascript"  src="js/index.js"></script>
+</html>
