@@ -14,7 +14,7 @@ class dirRead():
                 break
     def get_file_name_ALL(self,file_name):
         
-        return self.root_dir+"\\"+file_name
+        return self.root_dir + os.sep + file_name
     def make_Json(self):
         data = []
         data.append(self.sub_dirs)
